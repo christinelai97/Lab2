@@ -18,9 +18,11 @@ public class Lab2 {
       for (int j = 0; j < cols; j++) {
         myList[i][j] = "";
         
+        //calls method readData to read in data from csv file
+        //readData returns value numCount which is Artist's total number of songs in list
         numCount = readData(myList);
         
-        sortAlpha(myList, numCount);
+        //calls method to print out data data
         printData(myList, numCount);
       }
     }
@@ -78,18 +80,7 @@ public class Lab2 {
       
       return -1; //returns -1 if artist name is not yet listed
     }
-  
-    public static sortAlpha(String[][] array, int num) {
-      for(int i =0; i<n-1; i++) {
-        for (int j=i+1; j<n; j++) {
-          if (array[i][0].compareToIgnoreCase(array[j][0]) > 0) {
-            String temp = array[i][0];
-            array[i][0] = array[j][0];
-            array[j][0] = temp;
-          }
-        }
-      }
-    }
+ 
     
     //method prints data onto an output file 
     public static void printData(String[][] arr, int numCount) throws IOException {
