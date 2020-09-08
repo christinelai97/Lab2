@@ -19,6 +19,8 @@ public class Lab2 {
         myList[i][j] = "";
         
         numCount = readData(myList);
+        
+        sortAlpha(myList, numCount);
         printData(myList, numCount);
       }
     }
@@ -75,6 +77,18 @@ public class Lab2 {
       }
       
       return -1; //returns -1 if artist name is not yet listed
+    }
+  
+    public static sortAlpha(String[][] array, int num) {
+      for(int i =0; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+          if (array[i][0].compareToIgnoreCase(array[j][0]) > 0) {
+            String temp = array[i][0];
+            array[i][0] = array[j][0];
+            array[j][0] = temp;
+          }
+        }
+      }
     }
     
     //method prints data onto an output file 
