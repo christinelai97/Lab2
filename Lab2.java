@@ -22,7 +22,8 @@ public class Lab2 {
         //readData returns value numCount which is Artist's total number of songs in list
         numCount = readData(myList);
         
-        //calls method to print out data data
+        //calls method to sort array before printing out data data
+        sortData(myList, numCount);
         printData(myList, numCount);
       }
     }
@@ -80,6 +81,19 @@ public class Lab2 {
       
       return -1; //returns -1 if artist name is not yet listed
     }
+  
+     //method sorts array alphabetically 
+     public static void sortData(String [][] array, int num) {
+       for (int i = 0;i < num-1; i++) { 
+         for (int j = i+1; j < num; j++) {
+           if (array[i][0].compareToIgnoreCase(array[j][0])>0) {
+             String[] temp = array[i];
+             array[i] = array[j];
+             array[j] = temp;
+    }
+   }
+  }
+ }
  
     
     //method prints data onto an output file 
