@@ -1,8 +1,8 @@
 # Lab2
 This is my second Assignment for CISC3130. This Repository contains the following:
--CSV File of Spotify's Regional Global Daily Top 200 List
--Main Lab2.java program that reports which artists and how many of their songs are listed
--OutputText file Artist-WeekOf08302020.txt which is the output file of the report
+ CSV File of Spotify's Regional Global Daily Top 200 List,
+ Main Lab2.java program that reports which artists and how many of their songs are listed,
+ OutputText file Artist-WeekOf08302020.txt which is the output file of the report.
 
 I debated using an object oriented approach in this program. However, I wasn't quite sure how to implement 2D arrays
 with it, so I decided against it for this assignment. In creating the program, I first made sure to declare variables and 
